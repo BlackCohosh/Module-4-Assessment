@@ -17,7 +17,7 @@
             });
       };
     </script>
-    <script>
+    <!-- <script>
       document.getElementById("fortuneButton").onclick = function () {
         axios.get("http://localhost:4000/api/fortunes/")
             .then(function (response) {
@@ -25,7 +25,64 @@
               alert(data);
             });
       };
-    </script>
+    </script> -->
+    <!-- <div class="flex-cont centered top-space">
+      <button id="fortune">Receive your fortune</button>
+    </div> -->
+
+    <div class="flex-cont cont centered col top-space">
+  
+      <div style="display: none;" id="random-fortune-body">
+        <!-- Random fortune appended here -->
+      </div>
+    </div>
+    <div>
+      <br>
+      <br>    
+    </div>
+    <form>
+      <!-- <input 
+          type='text'
+          id="title"
+          placeholder="Type your fortune here"/>
+    </input> -->
+    <!-- <button>add fortune</button> -->
+    <div class="flex-cont cont centered col top-space">
+      <form id="new-fortune">
+        <h3 class="title">Add your own fortune</h3>
+        <input type="text" name="fortune" placeholder="Enter your fortune" />
+        <button type="submit">Add Fortune</button>
+      </form>
+      <div id="new-fortune-body">
+      </div>
+    </div>
+
+    <div class="flex-cont cont centered top-space col">
+      <h3 class="title">Edit a fortune</h3>
+      <form id="up-form">
+        <select id="up-select">
+        </select>
+
+        <div>
+          <input type="text" name="update" placeholder="Edit fortune" />
+          <button type="submit">Edit</button>
+        </div>
+
+      </form>
+    </div>
+
+
+    <div class="flex-cont cont centered top-space col">
+      <h3 class="title">Delete a fortune</h3>
+      <form id="del-form">
+        <select id="del-select">
+        </select>
+        <button type="submit">Delete</button>
+      </form>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
   </body>
   
 </html>
